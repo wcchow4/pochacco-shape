@@ -1,0 +1,57 @@
+body {
+    background-color: #F2F2F2;
+}
+
+svg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    overflow: visible;
+}
+
+.st0 {
+    fill: none;
+    stroke-miterlimit: 10;
+}
+
+.st1 {
+    visibility: hidden;
+    stroke-miterlimit: 10;
+}
+
+#pochacco .st1.show {
+    animation: draw-st1 3s 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes draw-st1 {
+    from {
+        fill: #F2F2F2;
+        visibility: hidden;
+    }
+    to {
+        fill: #000;
+        visibility: visible;
+    }
+}
+
+#pochacco .st0 {
+    stroke-dasharray: 1500;
+    stroke-dashoffset: -1500;
+    animation: draw-st0 5s 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes draw-st0 {
+    from {
+        stroke: #F2F2F2;
+        stroke-dashoffset: -1500;
+    }
+    to {
+        stroke: #000000;
+        stroke-dashoffset: 0;
+    }
+}
